@@ -168,15 +168,18 @@ footer {
 }
 
 
-/*  RESPONSIVE (MOBILE)  */
 @media (max-width: 768px) {
+
+    /* Fix photo going under navbar */
+    .hero {
+        margin-top: 260px;   /* increase this value */
+    }
 
     /* Show hamburger button */
     .hamburger {
         display: block;
     }
 
-    /* Hide links initially */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -188,7 +191,6 @@ footer {
         padding: 15px 0;
     }
 
-    /* Link styles inside dropdown */
     .nav-links a {
         padding: 10px 20px;
         margin: 0;
@@ -196,18 +198,14 @@ footer {
         display: block;
     }
 
-    /* Display when toggled */
     .nav-links.show {
         display: flex;
     }
 
-    /* Stack hero section vertically */
     .hero {
         flex-direction: column-reverse;
-        /* image comes first on mobile */
         text-align: center;
         padding: 30px;
-        margin-top: 200px;
     }
 
     .hero-left {
@@ -216,6 +214,5 @@ footer {
 
     .info-box {
         grid-template-columns: 1fr;
-        /* Single column on mobile */
     }
 }
