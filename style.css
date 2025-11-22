@@ -1,0 +1,221 @@
+/*  GLOBAL STYLES  */
+/* Resetting default margin + padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    scroll-behavior: smooth;
+    /* enables smooth scrolling for navbar links */
+    background: #faf8ff;
+    /* soft background color */
+}
+
+/* Highlight color used in name */
+.highlight {
+    color: #8A2BE2;
+    /* purple shade */
+    font-weight: bold;
+}
+
+
+/*  NAVBAR STYLING  */
+.navbar {
+    position: fixed;
+    /* sticky fixed navbar */
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #5b3fd6, #8a2be2);
+    /* creative gradient */
+    color: #fff;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 4px 10px #00000022;
+    /* light shadow for depth */
+}
+
+/* Logo text */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Navigation links */
+.nav-links a {
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffe4ff;
+    /* soft highlight on hover */
+}
+
+/* Hamburger icon hidden on large screens */
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*  HERO SECTION  */
+/* Main hero container */
+.hero {
+    margin-top: 90px;
+    /* space below navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 12%;
+    /* min-height: 80vh; */
+    gap: 40px;
+    height: 50vh;
+}
+
+/* Text area left */
+.hero-left {
+    width: 55%;
+}
+
+.hero-left h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Photo area */
+.hero-photo img {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #8A2BE2;
+    box-shadow: 0 5px 20px #00000035;
+    /* smooth shadow */
+}
+
+
+/*  PERSONAL INFO SECTION  */
+.info {
+    padding: 60px 12%;
+}
+
+.info h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Container for info items */
+.info-box {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+/* Individual row */
+.info-item {
+    background: #ffffff;
+    padding: 15px 18px;
+    border-radius: 10px;
+    border-left: 6px solid #8a2be2;
+    box-shadow: 0 3px 12px #00000018;
+}
+
+.label {
+    font-weight: bold;
+    color: #5b3fd6;
+}
+
+
+/*  SELF INTRO SECTION  */
+.self-intro {
+    padding: 60px 12%;
+    background: #f4ecff;
+    /* soft lavender background */
+    margin-top: 40px;
+}
+
+.self-intro h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+
+/*  FOOTER  */
+footer {
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+    background: #5b3fd6;
+    color: white;
+}
+
+
+/*  RESPONSIVE (MOBILE)  */
+@media (max-width: 768px) {
+
+    /* Show hamburger button */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide links initially */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #6a47dd;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 15px 0;
+    }
+
+    /* Link styles inside dropdown */
+    .nav-links a {
+        padding: 10px 20px;
+        margin: 0;
+        font-size: 18px;
+        display: block;
+    }
+
+    /* Display when toggled */
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Stack hero section vertically */
+    .hero {
+        flex-direction: column-reverse;
+        /* image comes first on mobile */
+        text-align: center;
+        padding: 30px;
+        margin-top: 200px;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .info-box {
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
+    }
+}

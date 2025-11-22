@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="my-photo.jpeg" />
+
+
+    <title>Student Portfolio</title>
+
+    <!-- Linking CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <!-- This navigation bar stays fixed on top and allows jumping to different sections -->
+    <nav class="navbar">
+
+        <!-- Logo text -->
+        <div class="logo">MyPortfolio</div>
+
+        <!-- Hamburger button for mobile -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+
+        <!-- Navigation links -->
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#info">Info</a>
+            <a href="#intro">Introduction</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <!-- This is the first section showing name, introduction & photo -->
+
+    <section class="hero" id="home">
+        <div class="hero-left">
+            <h1>Hello, I'm <span class="highlight">Shreevardhan Jadhav</span></h1>
+
+            <p class="intro-text">
+                Hi! I'm a B.C.A first-year student passionate about computers, coding, and creativity.
+                I enjoy learning new technologies, exploring interesting projects, and improving my skills.
+            </p>
+        </div>
+        <!-- Left-side text box -->
+
+        <div class="hero-photo">
+            <img src="my-photo.jpeg" alt="Your Photo">
+        </div>
+    </section>
+
+    <!-- SELF INTRO SECTION -->
+    <!-- This section is for additional personal introduction -->
+    <section class="self-intro" id="intro">
+        <h2>About Me</h2>
+        <p>
+            This is a sample introduction text. You can update this section with your own story —
+            your background, your interests, your goals, and why you chose B.C.A.
+            Write about your journey and dreams!
+        </p>
+    </section>
+
+    <!-- INFO SECTION -->
+    <!-- This section contains all personal and academic details -->
+    <section class="info" id="info">
+        <h2>Personal Details</h2>
+
+        <div class="info-box">
+
+            <!-- Individual detail rows -->
+            <div class="info-item">
+                <span class="label">Full Name</span>
+                <span class="value">Shreevardhan Yashwant Jadhav</span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">Class</span>
+                <span class="value">B.C.A - F.Y</span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">Division</span>
+                <span class="value">A</span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">Roll No</span>
+                <span class="value">45</span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">Contact</span>
+                <span class="value">7410718001</span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">School</span>
+                <span class="value">Prakash Public School, Urun-Ishwarpur</span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">11th & 12th College</span>
+                <span class="value">Apex Tutorial</span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">Current College</span>
+                <span class="value">D.Y. Patil Agriculture & Technical University, Talsande</span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">Hobbies</span>
+                <span class="value">Cricket, Football, Traveling</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <!-- Simple footer at bottom -->
+    <footer>
+        <p>© 2025 Student Portfolio | Designed by Shreevardhan Jadhav</p>
+    </footer>
+
+    <!-- Small JavaScript for mobile menu toggle -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("show");
+        }
+    </script>
+
+</body>
+
+</html>
